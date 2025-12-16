@@ -10,8 +10,10 @@
 body{
     font-family: "Bai Jamjuree", sans-serif;
     Font-size: 18px;
-    max-width: 1440px;
+    
+   
 }
+
 
 h1,h2,h3{
     font-weight: 600;
@@ -27,7 +29,8 @@ p{
 .card__header{
     background-image: url(./images/bg-header-desktop.png);
     background-repeat: no-repeat;
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,8 +41,8 @@ p{
 
 .card__main_logo{
     
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
 }
 
 .card__head_body{
@@ -84,7 +87,7 @@ margin: 5px;
 
 .card__top_text{   
     text-align: center;  
-    max-width: 650px;
+    max-width: 600px;
     line-height: 1.5;
     margin-bottom: 10px;
 
@@ -96,15 +99,16 @@ margin: 5px;
 
 
 .card__top_body{
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
    align-items: center;
     gap: 100px;
     margin-bottom: 100px;
+    max-width: 100%;
 }
 
 .computer_img{
-    width: 600px;
-    height: 400px;
+    max-width: 100%;  
 }
 
 .card__topright{
@@ -114,9 +118,21 @@ margin: 5px;
     max-width: 380px;
 }
 
+.card__topright_text{
+    max-width: 100%;
+}
+
+.card__topright_text h3{
+    margin-bottom: 10px;
+}
+
+.card__topright_text p{
+    line-height: 1.4;
+}
+
 .card__mid_text{
     text-align: center;  
-    max-width: 680px;
+    max-width: 650px;
     line-height: 1.5;
     margin-bottom: 70px;
 }
@@ -164,11 +180,12 @@ margin: 5px;
     align-items: center;
     gap: 100px;
     margin-bottom: 100px;
+    max-width: 100%;
 }
 
 .card__bottom_word{
     text-align: center;
-    max-width: 700px;
+    max-width: 650px;
     margin-bottom: 50px;
 }
 
@@ -202,6 +219,20 @@ margin: 5px;
     color: hsl(210, 10%, 33%);
 }
 
+.footer_link:nth-of-type(2){
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.footer_link:nth-of-type(4){
+    grid-column: 2;
+}
+
+.footer_link:nth-of-type(5){
+    grid-column: 3 ;
+    grid-row: 1;
+}
+
 .footer_link:hover{
     color: hsl(171, 66%, 44%);
 }
@@ -226,9 +257,123 @@ margin: 5px;
 background-color: whitesmoke;}
     .attribution a { color: hsl(228, 45%, 44%); }
 
-    @media(max-width:375px){
+    @media(max-width:700px){
         body{
-            font-size: 20px;
+           
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.5;    
+            
+            
+        }
+        .card__header{
+            background-image: url(./images/bg-header-mobile.png);
+            max-width: 100%;
+            padding: 100px 20px 70px 20px;
+        }
+
+        .card__main_logo{
+            width: 100px;
+            height: 100px;
+        }
+        .card__header_logo{
+            margin-bottom: 30px;
+        }
+       .card__head_body{
+     
+       margin-bottom: 15px;
+       }
+
+       .card__head_body h1{
+        margin-bottom: 15px;
+         line-height: 1.2;
+       }
+
+        .card__link{
+            width: 100%;
+            text-align: center;
+        }
+        
+        .ios_link{
+            display: block;
+            margin-bottom: 20px;
+        
+        }
+
+        .mac_link{
+           display: block; 
+        }
+
+        .card__main_body{
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card__top_body{
+            grid-template-columns: 1fr;
+    
+        }
+        .card__topright_text{
+            width: 100%;
+        }
+
+        .devices_img{
+            max-width: 100%;
+        }
+
+        .card__midbody_join{
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .card__company_logo{
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .card__footer_body{
+            flex-direction: column;
+            padding: 40px;
+            gap: 40px;
+            
+        }
+
+        .footer_logo{
+            width: 50px;
+            height: 50px;
+        }
+
+        .foot_logo_link{
+            flex-direction: column;
+        }
+
+        .card__footer_link{
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .footer_link:nth-of-type(2){
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .footer_link:nth-of-type(4){
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .footer_link:nth-of-type(5){
+            grid-column: 1;
+            grid-row: 5;
+        }
+
+        .foot_logo_link{
+            gap: 30px;
+        }
+        
+        .social_logo{
+            margin: 13px;
+            font-size: 25px;
         }
 
     }
